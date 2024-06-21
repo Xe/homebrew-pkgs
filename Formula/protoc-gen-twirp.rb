@@ -5,6 +5,12 @@ class ProtocGenTwirp < Formula
   sha256 "ca1c560001a98dfd3b1a7805febfc7735304705b3d32625b5d875485d9a56dca"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/Xe/homebrew-pkgs/releases/download/protoc-gen-twirp-8.1.3"
+    sha256 cellar: :any_skip_relocation, ventura:      "2ce17ccf6cd012cc1137ca15aab227cbd0cf635da208dbd002673b89a45a621f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b0eba65407952501b59b9e65e22aa813af42345ae0609f1fc337f036fd5c0425"
+  end
+
   depends_on "go" => :build
   depends_on "protobuf"
 
