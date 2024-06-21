@@ -7,8 +7,9 @@ class ProtocGenTwirp < Formula
 
   bottle do
     root_url "https://github.com/Xe/homebrew-pkgs/releases/download/protoc-gen-twirp-8.1.3"
-    sha256 cellar: :any_skip_relocation, ventura:      "2ce17ccf6cd012cc1137ca15aab227cbd0cf635da208dbd002673b89a45a621f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b0eba65407952501b59b9e65e22aa813af42345ae0609f1fc337f036fd5c0425"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f06b193b8ac93065f0f6e7f12212c0410a853e193957de6bc2eb45b9292221a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d74a7168584ecb880d7305238d80b09246bd4e51a24f28001f50bb1fb6b49589"
   end
 
   depends_on "go" => :build
