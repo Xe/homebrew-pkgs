@@ -16,6 +16,7 @@ class ProtocGenTwirp < Formula
 
   def install
     ENV["GO111MODULE"] = "auto"
+    ENV["BUMP_VERSION"] = "v#{version}"
     system "go", "mod", "init", "github.com/twitchtv/twirp"
     system "go", "build", *std_go_args(ldflags: "-s -w"), "./protoc-gen-twirp"
     prefix.install_metafiles
